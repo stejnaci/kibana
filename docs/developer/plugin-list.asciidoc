@@ -464,7 +464,8 @@ using the CURL scripts in the scripts folder.
 
 
 |{kib-repo}blob/{branch}/x-pack/plugins/security/README.md[security]
-|See Configuring security in Kibana.
+|See Configuring security in
+Kibana.
 
 
 |{kib-repo}blob/{branch}/x-pack/plugins/security_solution/README.md[securitySolution]
