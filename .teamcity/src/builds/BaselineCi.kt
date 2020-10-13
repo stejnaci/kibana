@@ -2,6 +2,7 @@ package builds
 
 import addSlackNotifications
 import builds.default.DefaultBuild
+import builds.default.DefaultSavedObjectFieldMetrics
 import builds.default.DefaultVisualRegression
 import builds.oss.OssBuild
 import builds.oss.OssVisualRegression
@@ -12,7 +13,7 @@ import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.vcs
 object BaselineCi : BuildType({
   id("Baseline_CI")
   name = "Baseline CI"
-  description = "Runs builds for every commit"
+  description = "Runs builds, saved object field metrics for every commit"
   type = Type.COMPOSITE
   paused = true
 
@@ -24,7 +25,8 @@ object BaselineCi : BuildType({
 
   dependsOn(
     OssBuild,
-    DefaultBuild
+    DefaultBuild,
+    DefaultSavedObjectFieldMetrics
   )
 
   addSlackNotifications()

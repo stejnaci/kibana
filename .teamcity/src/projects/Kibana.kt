@@ -149,6 +149,7 @@ fun Kibana(config: KibanaConfiguration = KibanaConfiguration()) : Project {
           buildType(DefaultFirefox)
           buildType(DefaultAccessibility)
           buildType(DefaultSecuritySolution)
+          buildType(DefaultSavedObjectFieldMetrics)
 
           subProject {
             id("Default_CIGroups")
