@@ -24,17 +24,9 @@ object DefaultSavedObjectFieldMetrics : BuildType({
           ./.ci/teamcity/default/saved_object_field_metrics.sh
         """.trimIndent()
     }
-
-    failedTestReporter()
-  }
-
-  features {
-    junit()
   }
 
   dependencies {
     defaultBuild()
   }
-
-  addTestArtifacts()
 })
