@@ -10,7 +10,7 @@ export JOB=oss-visualRegression
 export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 PUPPETEER_EXECUTABLE_PATH="$(command -v google-chrome-stable)"
 export PUPPETEER_EXECUTABLE_PATH
-export KIBANA_INSTALL_DIR="$KIBANA_DIR/build/kibana-build-default"
+export KIBANA_INSTALL_DIR="$PARENT_DIR/build/kibana-build-default"
 
 ###
 ### Set Percy parallel build support environment vars

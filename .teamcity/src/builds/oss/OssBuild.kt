@@ -29,7 +29,7 @@ object OssBuild : BuildType({
   artifactRules = "+:build/oss/kibana-build-oss/**/* => kibana-oss.tar.gz"
 })
 
-fun Dependencies.ossBuild(rules: String = "+:kibana-oss.tar.gz!** => build/kibana-build-oss") {
+fun Dependencies.ossBuild(rules: String = "+:kibana-oss.tar.gz!** => ../build/kibana-build-oss") {
   dependency(OssBuild) {
     snapshot {
     }

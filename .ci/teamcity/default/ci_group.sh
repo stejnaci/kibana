@@ -6,7 +6,7 @@ source "$(dirname "${0}")/../util.sh"
 
 export CI_GROUP="$1"
 export JOB=kibana-default-ciGroup${CI_GROUP}
-export KIBANA_INSTALL_DIR="$KIBANA_DIR/build/kibana-build-default"
+export KIBANA_INSTALL_DIR="$PARENT_DIR/build/kibana-build-default"
 
 cd "$XPACK_DIR"
 

@@ -5,7 +5,7 @@ set -euo pipefail
 source "$(dirname "${0}")/../util.sh"
 
 export JOB=kibana-default-securitySolution
-export KIBANA_INSTALL_DIR="$KIBANA_DIR/build/kibana-build-default"
+export KIBANA_INSTALL_DIR="$PARENT_DIR/build/kibana-build-default"
 
 cd "$XPACK_DIR"
 

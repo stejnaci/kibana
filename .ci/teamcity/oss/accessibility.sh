@@ -5,7 +5,7 @@ set -euo pipefail
 source "$(dirname "${0}")/../util.sh"
 
 export JOB=kibana-oss-accessibility
-export KIBANA_INSTALL_DIR="$KIBANA_DIR/build/kibana-build-oss"
+export KIBANA_INSTALL_DIR="$PARENT_DIR/build/kibana-build-oss"
 
 checks-reporter-with-killswitch "Kibana accessibility tests" \
   node scripts/functional_tests \

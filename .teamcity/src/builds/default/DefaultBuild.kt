@@ -36,7 +36,7 @@ object DefaultBuild : BuildType({
   }
 })
 
-fun Dependencies.defaultBuild(rules: String = "+:kibana-default.tar.gz!** => build/kibana-build-default") {
+fun Dependencies.defaultBuild(rules: String = "+:kibana-default.tar.gz!** => ../build/kibana-build-default") {
   dependency(DefaultBuild) {
     snapshot {
     }
@@ -49,7 +49,7 @@ fun Dependencies.defaultBuild(rules: String = "+:kibana-default.tar.gz!** => bui
 
 fun Dependencies.defaultBuildWithPlugins() {
   defaultBuild("""
-    +:kibana-default.tar.gz!** => build/kibana-build-default
+    +:kibana-default.tar.gz!** => ../build/kibana-build-default
     +:kibana-default-plugins.tar.gz!**
   """.trimIndent())
 }
