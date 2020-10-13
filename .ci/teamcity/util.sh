@@ -44,3 +44,8 @@ checks-reporter-with-killswitch() {
     "${arguments[@]:1}";
   fi
 }
+
+is_pr() {
+  [[ "$GITHUB_PR_NUMBER" ]] && return
+  false
+}

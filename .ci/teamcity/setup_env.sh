@@ -24,7 +24,12 @@ tc_set_env NODE_OPTIONS "${NODE_OPTIONS:-} --max-old-space-size=4096"
 
 tc_set_env FORCE_COLOR 1
 tc_set_env TEST_BROWSER_HEADLESS 1
-tc_set_env CHECKS_REPORTER_ACTIVE false # TODO
+
+if is_pr; then
+  tc_set_env CHECKS_REPORTER_ACTIVE true
+else
+  tc_set_env CHECKS_REPORTER_ACTIVE false
+fi
 
 tc_set_env INGEST_MANAGEMENT_PACKAGE_REGISTRY_PORT 6104 # Any unused port is fine, used by ingest manager tests
 
@@ -37,9 +42,3 @@ else
 fi
 
 # TODO vault keys
-
-# TODO
-# if [[ -d "/home/agent/.kibana/node_modules" ]]; then
-#   echo 'Using node_modules cache'
-#   mv /home/agent/.kibana/node_modules .
-# fi
