@@ -17,9 +17,10 @@ export BUILD_URL=""
 export JOB_NAME=""
 export NODE_NAME=""
 
-# ES_BUILD_JAVA = openjdk14 -- .ci/java-versions.properties
+# TODO ES_BUILD_JAVA = openjdk14 -- .ci/java-versions.properties
 export ES_BUILD_JAVA="openjdk14"
 export PATH="$HOME/.java/$ES_BUILD_JAVA/bin:$PATH"
+export JAVA_HOME="$HOME/.java/$ES_BUILD_JAVA"
 
 tc_start_block "Build Elasticsearch"
 ./gradlew -Dbuild.docker=true assemble --parallel

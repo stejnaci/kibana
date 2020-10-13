@@ -20,7 +20,10 @@ val cloneForVerify = { build: BuildType ->
   }
   newBuild.dependencies {
     dependency(ESSnapshotBuild) {
-      snapshot {}
+      snapshot {
+        onDependencyFailure = FailureAction.FAIL_TO_START
+        onDependencyCancel = FailureAction.FAIL_TO_START
+      }
       // This is just here to allow us to select a build when manually triggering a build using the UI
       artifacts {
         artifactRules = "manifest.json"
