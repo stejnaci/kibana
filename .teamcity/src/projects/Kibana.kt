@@ -162,6 +162,7 @@ fun Kibana(config: KibanaConfiguration = KibanaConfiguration()) : Project {
 
       buildType(FullCi)
       buildType(BaselineCi)
+      buildType(HourlyCi)
       buildType(PullRequestCi)
     }
 
